@@ -2,57 +2,64 @@
   --font-playfair: 'Playfair Display', serif;
   --font-roboto: 'Roboto', sans-serif;
 }
-*{
-  margin: 0px;
-  padding: 0px;
+
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
+
+body {
   background-color: #051021;
-  color: #FDFDFD;
+  color: #fdfdfd;
   font-family: var(--font-roboto);
 }
-nav{
-  box-shadow:-3px 7px 7px 3px rgba(0, 0, 0, 0.493);
-  padding: 5px;
+
+nav {
+  box-shadow: -3px 7px 7px 3px rgba(0, 0, 0, 0.493);
+  padding: 15px;
   margin-bottom: 20px;
   text-align: center;
 }
-nav h1{
+
+.titulo-principal {
   font-size: 35px;
 }
 
-header{
-  padding: 10px;
+header {
+  padding: 20px;
 }
-section{
+
+section {
   max-width: 99%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
-  .imgback{
-    position: relative;
-    margin-bottom: 40px;
-  }
-  .imgback::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url('/img/imgbackground.png') center/cover no-repeat;
-    opacity: 0.2;
-    z-index: -1; /* Garante que o pseudo-elemento fique atrás da imagem */
-  }
-  
-.pendriver{
+
+.imgback {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.imgback::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/imgbackground.png') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.pendriver {
   max-width: 100%;
   height: auto;
   opacity: 0.7;
- 
 }
-a.compra{
-  background-color: #008000 ;
-   margin: 0 auto;
+
+a.compra {
+  background-color: #008000;
+  margin: 0 auto;
   margin-bottom: 20px;
   text-decoration: none;
   text-align: center;
@@ -62,41 +69,161 @@ a.compra{
   width: 90%;
   height: 50px;
   border-radius: 10px;
-  
 }
 
-a.compra span{
-  color:#FDFDFD;
- font-size: 35px;
- padding: 5px;
-
+a.compra span {
+  color: #fdfdfd;
+  font-size: 35px;
+  padding: 5px;
 }
-.tutorial{
+
+.tutorial {
   font-size: 15px;
   margin-bottom: 10px;
 }
-.numeros{
+
+.numeros {
   font-size: 20px;
   margin-bottom: 7px;
 }
- h1{
+
+.comoatualizaropendrive {
   margin-top: 20px;
   font-size: 29px;
 }
-h2{
-  color: #3498DB;
+
+h2 {
+  color: #3498db;
   margin: 10px 10px;
   text-align: center;
 }
 
-.imgsmartfone{
+.imgsmartfone,
+.imgpc {
   max-width: 100%;
   border-radius: 7px;
 }
-.imgpc{
-  max-width: 100%;
-  border-radius: 7px;
+
+/* Estilos específicos para telas menores, como smartphones */
+@media only screen and (max-width: 767px) {
+  .titulo-principal {
+    font-size: 25px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  a.compra {
+    width: 80%;
+    height: 40px;
+  }
+
+  a.compra span {
+    font-size: 25px;
+  }
+
+  .tutorial {
+    font-size: 12px;
+  }
+
+  .numeros {
+    font-size: 15px;
+  }
+
+  .comoatualizaropendrive {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .imgsmartfone,
+  .imgpc {
+    border-radius: 5px;
+  }
 }
-footer{
-  text-align: center;
+
+/* Estilos específicos para telas maiores, como PCs */
+@media only screen and (min-width: 768px) {
+  .img-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Adapte conforme necessário */
+    margin-bottom: 20px;
+  }
+
+  .imgsmartfone,
+  .imgpc {
+    max-width: 48%; /* Defina o tamanho desejado para as imagens, considerando margens e espaçamento */
+    border-radius: 7px;
+    
+  }
+
+  .smartfone,
+  .pc {
+    display: flex; /* Utilize display flex para colocar a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 3px;
+    
+    
+  }
+
+  .tutorial {
+    max-width: 60%; /* Ajuste a largura máxima do texto conforme necessário */
+    padding-left: 20px; /* Adapte o espaçamento à esquerda conforme necessário */
+  }
+.titulo-principal {
+    font-size: 45px;
+  }
+
+  header {
+    padding: 20px;
+  }
+  .imgback {
+    display: flex;
+  }
+  .imgback  p{
+    max-width: 40%;
+    font-size: 30px;
+  }
+
+  .pendriver {
+    float: left
+  }
+
+  a.compra {
+    width: 70%;
+    height: 60px;
+    border-radius: 15px;
+  }
+
+  a.compra span {
+    font-size: 45px;
+  }
+
+  .tutorial {
+    font-size: 20px;
+  }
+
+  .numeros {
+    font-size: 25px;
+  }
+
+  .comoatualizaropendrive {
+    margin-top: 30px;
+    font-size: 40px;
+  }
+
+
+  h2 {
+    font-size: 24px;
+    width: 50%;
+  }
+
 }
