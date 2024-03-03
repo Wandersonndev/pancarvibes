@@ -206,6 +206,11 @@ h2 {
   a.compra span {
     font-size: 45px;
   }
+  .copy{
+    font-size: 30px;
+    font-family: var(--font-roboto);
+   
+  }
 
   .tutorial {
     font-size: 20px;
