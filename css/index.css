@@ -103,7 +103,10 @@ h2 {
   max-width: 100%;
   border-radius: 7px;
 }
-
+footer{
+  text-align: center;
+  padding: 7px;
+}
 /* Estilos específicos para telas menores, como smartphones */
 @media only screen and (max-width: 767px) {
   .titulo-principal {
