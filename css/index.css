@@ -107,6 +107,17 @@ footer{
   text-align: center;
   padding: 7px;
 }
+
+.preco{
+  color: rgb(196, 7, 7);
+  font-size: 30px;
+  font-family: var(--font-roboto);
+  margin: 10px;
+  text-align: center;
+}
+
+
+
 /* Estilos específicos para telas menores, como smartphones */
 @media only screen and (max-width: 767px) {
   .titulo-principal {
@@ -147,6 +158,9 @@ footer{
   .imgsmartfone,
   .imgpc {
     border-radius: 5px;
+  }
+  .preco{
+    font-size: 20;
   }
 }
 
